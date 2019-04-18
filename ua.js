@@ -92,7 +92,7 @@ class UserAgentParser {
     }
 
     static parseOS(ua) {
-        let rst = /Android[\s]?(\d+(?:\.\d+)+)?;/.exec(ua);
+        let rst = /Android[\s]?(\d+(?:\.\d+)*)?;/.exec(ua);
         if (rst) {
             return {name: "android", version: rst[1] || ""};
         }
